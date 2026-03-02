@@ -1,0 +1,17 @@
+{
+  "name": "Alex Chen",
+  "role": "Full Stack Developer",
+  "tagline": "Building the future, one commit at a time.",
+  "avatar": "https://api.dicebear.com/9.x/notionists/svg?seed=alex",
+  "bio": "Passionate full-stack developer with 5+ years of experience crafting scalable web applications. I live in the terminal, mass deploy from the command line, and believe great software is born from clean architecture and obsessive attention to detail.",
+  "resumeUrl": "#",
+  "stats": {
+    "yearsExperience": 5,
+    "projectsCompleted": 42,
+    "githubCommits": 2847
+  },
+  "techStack": [
+    "React", "TypeScript", "Node.js", "Python", "Go",
+    "PostgreSQL", "Docker", "Kubernetes", "AWS", "Linux"
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "company": "TechCorp",
+    "role": "Senior Full Stack Developer",
+    "duration": "2022 — Present",
+    "achievements": [
+      "Led migration of monolith to microservices, reducing deploy time by 80%",
+      "Built real-time data pipeline processing 1M+ events/day",
+      "Mentored team of 5 junior developers"
+    ]
+  },
+  {
+    "company": "StartupXYZ",
+    "role": "Full Stack Developer",
+    "duration": "2020 — 2022",
+    "achievements": [
+      "Developed customer-facing dashboard serving 50K+ users",
+      "Implemented OAuth2 authentication and RBAC system",
+      "Reduced API response times by 60% through caching strategies"
+    ]
+  },
+  {
+    "company": "DevAgency",
+    "role": "Frontend Developer",
+    "duration": "2019 — 2020",
+    "achievements": [
+      "Built 15+ client websites using React and TypeScript",
+      "Created reusable component library adopted across all projects",
+      "Introduced automated testing, achieving 90% code coverage"
+    ]
+  }
+]

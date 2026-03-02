@@ -1,0 +1,30 @@
+{
+  "languages": [
+    { "name": "TypeScript", "level": 95 },
+    { "name": "Python", "level": 90 },
+    { "name": "Go", "level": 80 },
+    { "name": "Rust", "level": 65 },
+    { "name": "SQL", "level": 85 }
+  ],
+  "frameworks": [
+    { "name": "React", "level": 95 },
+    { "name": "Node.js", "level": 90 },
+    { "name": "Next.js", "level": 85 },
+    { "name": "Express", "level": 88 },
+    { "name": "FastAPI", "level": 75 }
+  ],
+  "tools": [
+    { "name": "Git", "level": 95 },
+    { "name": "Docker", "level": 90 },
+    { "name": "Vim/Neovim", "level": 85 },
+    { "name": "Linux", "level": 92 },
+    { "name": "VS Code", "level": 90 }
+  ],
+  "devops": [
+    { "name": "AWS", "level": 85 },
+    { "name": "Kubernetes", "level": 78 },
+    { "name": "CI/CD", "level": 90 },
+    { "name": "Terraform", "level": 72 },
+    { "name": "Nginx", "level": 80 }
+  ]
+}

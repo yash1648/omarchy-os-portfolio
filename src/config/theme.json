@@ -1,0 +1,16 @@
+{
+  "accentColor": "157 100% 50%",
+  "accentColorHex": "#00ff9c",
+  "secondaryAccent": "195 100% 50%",
+  "secondaryAccentHex": "#00c8ff",
+  "purpleGlow": "263 86% 66%",
+  "background": "170 28% 5%",
+  "panel": "172 17% 8%",
+  "glowIntensity": 0.4,
+  "windowOpacity": 0.85,
+  "fonts": {
+    "heading": "'JetBrains Mono', monospace",
+    "body": "'Inter', sans-serif",
+    "mono": "'JetBrains Mono', monospace"
+  }
+}
