@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "title": "NeuralNet CLI",
+    "description": "A command-line tool for training and deploying neural networks with zero configuration.",
+    "tech": ["Python", "PyTorch", "CLI"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "thumbnail": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "2",
+    "title": "CloudSync",
+    "description": "Real-time file synchronization across distributed cloud infrastructure.",
+    "tech": ["Go", "gRPC", "AWS"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "3",
+    "title": "DevBoard",
+    "description": "A beautiful developer dashboard for monitoring CI/CD pipelines and deployments.",
+    "tech": ["React", "TypeScript", "GraphQL"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "thumbnail": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "4",
+    "title": "CryptoTracker",
+    "description": "Real-time cryptocurrency portfolio tracker with predictive analytics.",
+    "tech": ["Next.js", "Python", "Redis"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "thumbnail": "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "5",
+    "title": "TermUI",
+    "description": "A modern TUI framework for building beautiful terminal user interfaces.",
+    "tech": ["Rust", "Terminal", "TUI"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "thumbnail": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "6",
+    "title": "K8s Dashboard",
+    "description": "Lightweight Kubernetes cluster monitoring and management dashboard.",
+    "tech": ["Go", "React", "Docker"],
+    "github": "https://github.com",
+    "live": "https://example.com",
+    "thumbnail": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop"
+  }
+]
