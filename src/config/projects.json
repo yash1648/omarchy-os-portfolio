@@ -1,56 +1,121 @@
 [
+  
   {
     "id": "1",
-    "title": "NeuralNet CLI",
-    "description": "A command-line tool for training and deploying neural networks with zero configuration.",
-    "tech": ["Python", "PyTorch", "CLI"],
-    "github": "https://github.com",
-    "live": "https://example.com",
-    "thumbnail": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop"
+    "title": "Study Hub",
+    "description": "Comprehensive DSA and interview preparation platform featuring subject-wise learning paths, progress tracking, and AI-powered study assistance.",
+    "tech": ["TypeScript", "AI", "Full Stack"],
+    "github": "https://github.com/yash1648/study-hub",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop"
   },
   {
     "id": "2",
-    "title": "CloudSync",
-    "description": "Real-time file synchronization across distributed cloud infrastructure.",
-    "tech": ["Go", "gRPC", "AWS"],
-    "github": "https://github.com",
-    "live": "https://example.com",
-    "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop"
+    "title": "PR Review Bot",
+    "description": "Automated code review system that analyzes GitHub pull requests using static heuristics and local LLM inference.",
+    "tech": ["Java", "LLM", "GitHub API"],
+    "github": "https://github.com/yash1648/pr-review-bot",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop"
   },
   {
     "id": "3",
-    "title": "DevBoard",
-    "description": "A beautiful developer dashboard for monitoring CI/CD pipelines and deployments.",
-    "tech": ["React", "TypeScript", "GraphQL"],
-    "github": "https://github.com",
-    "live": "https://example.com",
-    "thumbnail": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=250&fit=crop"
+    "title": "LLM Runtime (Rust)",
+    "description": "Local large language model runtime designed and implemented in Rust for high-performance inference.",
+    "tech": ["Rust", "LLM", "Systems Programming"],
+    "github": "https://github.com/yash1648/llm-runtime-rust",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
   },
   {
     "id": "4",
-    "title": "CryptoTracker",
-    "description": "Real-time cryptocurrency portfolio tracker with predictive analytics.",
-    "tech": ["Next.js", "Python", "Redis"],
-    "github": "https://github.com",
-    "live": "https://example.com",
-    "thumbnail": "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=400&h=250&fit=crop"
+    "title": "Valentine Interactive Webpage",
+    "description": "Animated interactive Valentine's webpage with playful mechanics and smooth animations built using pure web technologies.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/yash1648/valentine",
+    "live": "runawaybutton.vercel.app/",
+    "thumbnail": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=250&fit=crop"
   },
   {
     "id": "5",
-    "title": "TermUI",
-    "description": "A modern TUI framework for building beautiful terminal user interfaces.",
-    "tech": ["Rust", "Terminal", "TUI"],
-    "github": "https://github.com",
-    "live": "https://example.com",
-    "thumbnail": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=400&h=250&fit=crop"
+    "title": "Minecraft Server Deployment Guide",
+    "description": "Production-ready guide to deploy Minecraft Java server using Docker, PaperMC, and Playit.gg tunneling.",
+    "tech": ["Docker", "Shell", "DevOps"],
+    "github": "https://github.com/yash1648/mc-server",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1587573089734-09cb69c0f2b1?w=400&h=250&fit=crop"
   },
   {
     "id": "6",
-    "title": "K8s Dashboard",
-    "description": "Lightweight Kubernetes cluster monitoring and management dashboard.",
-    "tech": ["Go", "React", "Docker"],
-    "github": "https://github.com",
-    "live": "https://example.com",
-    "thumbnail": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop"
+    "title": "Markdown Editor",
+    "description": "Live preview markdown editor designed for fast and distraction-free writing.",
+    "tech": ["TypeScript", "Frontend"],
+    "github": "https://github.com/yash1648/md-editor",
+    "live": "generatormd.netlify.app/",
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "7",
+    "title": "MicroDocs AI",
+    "description": "Multi-agent system that generates and maintains living documentation for Spring Boot microservices.",
+    "tech": ["Python", "AI", "Microservices"],
+    "github": "https://github.com/yash1648/MicroDocsAI",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "8",
+    "title": "Daily Diary AI",
+    "description": "AI-powered journaling app that helps users document daily experiences and reflections intelligently.",
+    "tech": ["TypeScript", "AI", "Full Stack"],
+    "github": "https://github.com/yash1648/Daily-Dairy-AI",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "9",
+    "title": "Rust Voice Assistant",
+    "description": "Offline voice assistant that converts speech to intelligent responses with natural speech output.",
+    "tech": ["Rust", "Speech Recognition", "TTS"],
+    "github": "https://github.com/yash1648/rust-assistant",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1581090700227-1e8a0f6f7c17?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "10",
+    "title": "MacOS Portfolio",
+    "description": "Portfolio website inspired by macOS UI with interactive desktop elements.",
+    "tech": ["JavaScript", "Frontend"],
+    "github": "https://github.com/yash1648/MacOS-Portfolio",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "11",
+    "title": "Online Reservation System",
+    "description": "Java-based reservation system for managing bookings and availability.",
+    "tech": ["Java", "Backend"],
+    "github": "https://github.com/yash1648/The-Online-Reservation-System",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "12",
+    "title": "Personal Assistant",
+    "description": "Modular personal assistant built in Java with Python extensions for automation and task management.",
+    "tech": ["Java", "Python", "Automation"],
+    "github": "https://github.com/yash1648/Personal-Assistant",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1589254065909-b7086229d08c?w=400&h=250&fit=crop"
+  },
+  {
+    "id": "13",
+    "title": "ERP System for SMEs",
+    "description": "Modular ERP system designed for small and medium enterprises.",
+    "tech": ["Java", "Spring Boot"],
+    "github": "https://github.com/yash1648/ERP-System",
+    "live": "",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop"
   }
+
 ]

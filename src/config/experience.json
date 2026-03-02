@@ -1,32 +1,25 @@
 [
   {
-    "company": "TechCorp",
-    "role": "Senior Full Stack Developer",
-    "duration": "2022 — Present",
+    "company": "Slytherin EduTech Pvt. Ltd.",
+    "role": "Java Spring Boot Trainee ",
+    "duration": "Aug 2024 — Jan 2025",
     "achievements": [
-      "Led migration of monolith to microservices, reducing deploy time by 80%",
-      "Built real-time data pipeline processing 1M+ events/day",
-      "Mentored team of 5 junior developers"
+      " Worked on development of backend services using Spring Boot, following clean architecture practices and SOLID principles",
+      "Built and maintained REST APIs with proper MVC Architecture",
+      " Implemented authentication & authorization using JWT and role-based access control (RBAC) with Spring Security",
+      " Integrated Hibernate / JPA for database operations, optimized queries using pagination, indexing suggestions, and fetch strategies",
+      "Created and maintained API documentation & testing collections using Postman"
     ]
   },
   {
-    "company": "StartupXYZ",
-    "role": "Full Stack Developer",
-    "duration": "2020 — 2022",
+    "company": "Arcelor Technology Private Limited",
+    "role": "Software Developement Intern",
+    "duration": "Jun 2023 — Jul 2023",
     "achievements": [
-      "Developed customer-facing dashboard serving 50K+ users",
-      "Implemented OAuth2 authentication and RBAC system",
-      "Reduced API response times by 60% through caching strategies"
-    ]
-  },
-  {
-    "company": "DevAgency",
-    "role": "Frontend Developer",
-    "duration": "2019 — 2020",
-    "achievements": [
-      "Built 15+ client websites using React and TypeScript",
-      "Created reusable component library adopted across all projects",
-      "Introduced automated testing, achieving 90% code coverage"
+      "Assisted in building backend modules for an internal dashboard using PHP, improving data handling and reporting workflows",
+      "Created and maintained REST-style APIs for dashboard integration and internal feature support",
+      "Worked with MySQL for data retrieval and reporting; optimized queries using indexing and query restructuring to reduce response time"
     ]
   }
+  
 ]
