@@ -106,4 +106,5 @@ npm run test:watch
 
 ## License
 
-Add a license if you plan to make the project reusable (MIT is common for portfolios).
+This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) file for details.
+
