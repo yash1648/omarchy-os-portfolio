@@ -55,7 +55,7 @@ const Index = () => {
         onToggleView={() => setViewMode('resume')}
       />
 
-      <HeroWallpaper />
+      <HeroWallpaper onOpenWindow={openWindow} />
 
       {windows.map(w => {
         const config = windowConfig[w.id];

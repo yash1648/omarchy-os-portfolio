@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import profile from '@/config/profile.json';
 import { Download, ChevronDown, Terminal } from 'lucide-react';
+import type { WindowId } from '@/hooks/useWindowManager';
 
 const bootLines = [
   { text: '[  OK  ] Initializing kernel modules', delay: 100 },
@@ -78,7 +79,11 @@ const GRADIENT_ORBS = [
   { color: 'hsl(var(--glow-primary) / 0.06)', size: 350, x: '70%', y: '60%', duration: 22, delay: -8 },
 ];
 
-export const HeroWallpaper: React.FC = () => {
+interface HeroWallpaperProps {
+  onOpenWindow?: (id: WindowId) => void;
+}
+
+export const HeroWallpaper: React.FC<HeroWallpaperProps> = ({ onOpenWindow }) => {
   const [bootIndex, setBootIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [bootComplete, setBootComplete] = useState(false);
@@ -326,10 +331,7 @@ export const HeroWallpaper: React.FC = () => {
                 download_resume
               </a>
               <motion.button
-                onClick={() => {
-                  const dock = document.getElementById('dock');
-                  dock?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => onOpenWindow?.('about')}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border font-mono text-xs text-muted-foreground hover:text-primary hover:border-primary/40 transition-all"
               >
                 <Terminal size={14} />
