@@ -4,7 +4,7 @@ import { Send, Copy, Check, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import socials from '@/config/socials.json';
 import { toast } from 'sonner';
-import { sendEmail } from '@/lib/email';
+import { sendEmail, buildMailtoHref } from '@/lib/email';
 
 export const ContactWindow: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -39,10 +39,8 @@ export const ContactWindow: React.FC = () => {
       form.reset();
     } else {
       // Fallback to mailto:
-      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-      const body = encodeURIComponent(`From: ${name} (${emailAddr})\n\n${message}`);
-      window.open(`mailto:${email}?subject=${subject}&body=${body}`, '_blank');
-      toast.info('Email service not configured — opened mail client instead');
+      window.location.href = buildMailtoHref(email, name, message);
+      toast.info('Email service not configured — opening mail client');
     }
     setSending(false);
   };

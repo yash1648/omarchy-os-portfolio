@@ -10,15 +10,18 @@ const bootSequence = [
   'Initializing desktop environment...',
 ];
 
+const PARTICLE_COUNT = 20;
+
 function generateParticles(count: number) {
   if (typeof window === 'undefined') return [];
   return Array.from({ length: count }, (_, i) => ({
     id: i,
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
-    duration: 8 + Math.random() * 10,
-    driftX: Math.random() * 100 - 50,
-    driftY: Math.random() * -200 + Math.random() * 200,
+    driftX: (Math.random() - 0.5) * 80,
+    driftY: -60 - Math.random() * 140,
+    delay: Math.random() * 6,
+    duration: 10 + Math.random() * 8,
   }));
 }
 
@@ -28,7 +31,7 @@ export const HeroWallpaper: React.FC = () => {
   const [bootComplete, setBootComplete] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
 
-  const particles = useMemo(() => generateParticles(20), []);
+  const particles = useMemo(() => generateParticles(PARTICLE_COUNT), []);
 
   useEffect(() => {
     if (bootIndex >= bootSequence.length) {
@@ -55,24 +58,23 @@ export const HeroWallpaper: React.FC = () => {
 
   return (
     <div className="absolute inset-0 flex items-center justify-center gradient-mesh">
-      {/* Floating particles — stable positions */}
-      {particles.map((p) => (
-        <motion.div
-          key={p.id}
-          className="absolute w-1 h-1 rounded-full bg-primary/20"
-          initial={{ x: p.x, y: p.y }}
-          animate={{
-            y: [p.y, p.y + p.driftY],
-            x: [p.x, p.x + p.driftX],
-            opacity: [0.2, 0.6, 0.2],
-          }}
-          transition={{
-            duration: p.duration,
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
-        />
-      ))}
+      {/* Floating particles — CSS animated (zero JS thread cost) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        {particles.map((p) => (
+          <div
+            key={p.id}
+            className="absolute w-1 h-1 rounded-full bg-primary/30 particle"
+            style={{
+              left: p.x,
+              top: p.y,
+              '--drift-x': `${p.driftX}px`,
+              '--drift-y': `${p.driftY}px`,
+              animationDelay: `${p.delay}s`,
+              animationDuration: `${p.duration}s`,
+            } as React.CSSProperties}
+          />
+        ))}
+      </div>
 
       <div className="text-center z-10 px-4">
         {!bootComplete ? (

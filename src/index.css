@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -129,4 +127,30 @@
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Floating particles — zero JS main thread overhead */
+@keyframes particle-drift {
+  0% {
+    opacity: 0.15;
+    transform: translate(0, 0);
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translate(var(--drift-x), var(--drift-y));
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.15;
+    transform: translate(0, 0);
+  }
+}
+
+.particle {
+  animation: particle-drift ease-in-out infinite;
 }

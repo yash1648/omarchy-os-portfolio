@@ -5,8 +5,7 @@
     "description": "Intelligent automated code review system that integrates with GitHub webhooks for real-time pull request analysis. Dual analysis engine: fast static heuristics (secret detection, null checks) + deep contextual LLM inference via locally hosted Ollama — fully privacy-preserving. Publishes structured review comments directly on PRs within existing GitHub workflows.",
     "tech": ["Python", "GitHub API", "LLM", "Ollama", "Async"],
     "github": "https://github.com/yash1648/pr-review-bot",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "2",
@@ -14,8 +13,7 @@
     "description": "Fully local voice assistant with zero cloud dependencies — end-to-end voice-to-response-to-speech on your own hardware. Whisper.cpp for real-time STT, Piper-TTS for natural speech, and Gemma 3.x via Ollama for intelligent conversational responses. Modular async pipeline coordinating STT → LLM → TTS.",
     "tech": ["Rust", "Whisper.cpp", "Ollama", "TTS", "Async"],
     "github": "https://github.com/yash1648/rust-assistant",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1581090700227-1e8a0f6f7c17?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "3",
@@ -23,8 +21,7 @@
     "description": "Zero-config LAN file transfer tool. Discover peers and transfer files at full network speed — no internet, no cloud, no USB drives needed. Built entirely in Rust for maximum performance.",
     "tech": ["Rust", "LAN Networking"],
     "github": "https://github.com/yash1648/AeroShare",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "4",
@@ -32,8 +29,7 @@
     "description": "AI-powered journaling backend with emotional analysis and mood detection from daily entries. NLP-based mood pattern detection and historical trend analysis. Encrypted data storage and secure cloud sync with privacy-first design. RESTful APIs with JWT authentication and RBAC.",
     "tech": ["Java", "Spring Boot", "PostgreSQL", "NLP", "AI/ML"],
     "github": "https://github.com/yash1648/Daily-Diary-AI",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "5",
@@ -41,8 +37,7 @@
     "description": "Production-grade personal finance management system for tracking transactions, managing budgets, and delivering real-time AI-powered financial insights using Java Spring Boot.",
     "tech": ["Java", "Spring Boot"],
     "github": "https://github.com/yash1648/FinTrack-AI",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "6",
@@ -50,8 +45,7 @@
     "description": "Comprehensive RESTful API backend for managing books, users, and library transactions. JWT authentication with RBAC (admin, librarian, member roles). Normalized relational schema with full CRUD for inventory, user registration, and borrow/return workflows.",
     "tech": ["Java", "Spring Boot", "Hibernate", "MySQL", "JWT"],
     "github": "https://github.com/yash1648/Library-Management-System",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "7",
@@ -59,8 +53,7 @@
     "description": "Production-grade Minecraft server control panel with Docker orchestration, live console, config management, monitoring, and automated backups. Full container lifecycle management from a web dashboard.",
     "tech": ["Java", "Docker"],
     "github": "https://github.com/yash1648/obsidian-panel",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1587573089734-09cb69c0f2b1?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "8",
@@ -68,8 +61,7 @@
     "description": "Production-ready web application using Retrieval-Augmented Generation (RAG) and NLP to analyze and summarize legal contracts. Combines Python AI pipelines with a Spring Boot backend.",
     "tech": ["Python", "Spring Boot", "RAG", "NLP"],
     "github": "https://github.com/yash1648/contract-summarization-tool",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop"
+    "live": ""
   },
   {
     "id": "9",
@@ -77,7 +69,6 @@
     "description": "Production-ready guide to host a Minecraft Java Edition server with Docker and automatic public tunneling via playit.gg. Includes scripts for start, stop, backup, console, and plugin management.",
     "tech": ["Docker", "PaperMC", "Shell", "DevOps"],
     "github": "https://github.com/yash1648/mc-server",
-    "live": "",
-    "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop"
+    "live": ""
   }
 ]

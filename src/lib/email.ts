@@ -43,3 +43,9 @@ export async function sendEmail(params: SendEmailParams): Promise<SendEmailResul
     return { success: false, error: message };
   }
 }
+
+export function buildMailtoHref(email: string, name: string, message: string): string {
+  const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+  const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
+  return `mailto:${email}?subject=${subject}&body=${body}`;
+}

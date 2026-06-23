@@ -7,7 +7,7 @@ import experience from '@/config/experience.json';
 import projects from '@/config/projects.json';
 import blogPosts from '@/config/blog.json';
 import socials from '@/config/socials.json';
-import { sendEmail } from '@/lib/email';
+import { sendEmail, buildMailtoHref } from '@/lib/email';
 import { toast } from 'sonner';
 
 /* ───── Section Wrapper ───── */
@@ -54,9 +54,9 @@ const HeroSection: React.FC = () => (
         {/* Social Proof Strip */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
           {[
-            { icon: Users, label: 'Followers', value: '1.1K+' },
-            { icon: Eye, label: 'Impressions', value: '150K+' },
-            { icon: GitMerge, label: 'PRs Merged', value: '5+' },
+            { icon: Users, label: 'Followers', value: profile.stats.followers },
+            { icon: Eye, label: 'Impressions', value: profile.stats.impressions },
+            { icon: GitMerge, label: 'PRs Merged', value: profile.stats.prsMerged },
             { icon: Award, label: 'Projects', value: `${profile.stats.projectsCompleted}+` },
           ].map((stat) => (
             <motion.div
@@ -334,9 +334,8 @@ const ContactSection: React.FC = () => {
       form.reset();
     } else {
       toast.info('Opening mail client...');
-      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-      const body = encodeURIComponent(`From: ${name} (${emailAddr})\n\n${message}`);
-      window.open(`mailto:${socials.find(s => s.name === 'Email')?.url?.replace('mailto:', '')}?subject=${subject}&body=${body}`, '_blank');
+      const email = socials.find(s => s.name === 'Email')?.url?.replace('mailto:', '') || '';
+      window.location.href = buildMailtoHref(email, name, message);
     }
     setSending(false);
   };

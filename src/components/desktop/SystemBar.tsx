@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { Wifi, Battery, Power, FileText } from 'lucide-react';
 import { WindowId } from '@/hooks/useWindowManager';
 
@@ -9,12 +9,7 @@ interface SystemBarProps {
 }
 
 export const SystemBar: React.FC<SystemBarProps> = ({ activeWindow, onPowerClick, onToggleView }) => {
-  const [time, setTime] = useState(new Date());
-
-  useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
+  const time = useMemo(() => new Date(), []);
 
   const windowTitles: Record<string, string> = {
     about: 'about.sh',
