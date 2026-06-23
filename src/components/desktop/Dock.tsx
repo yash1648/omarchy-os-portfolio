@@ -20,7 +20,7 @@ const dockItems: { id: WindowId; label: string; icon: React.ElementType }[] = [
 
 export const Dock: React.FC<DockProps> = ({ onOpenWindow }) => {
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+    <div id="dock" className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

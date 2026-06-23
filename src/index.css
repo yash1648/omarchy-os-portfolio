@@ -132,25 +132,86 @@
 /* Floating particles — zero JS main thread overhead */
 @keyframes particle-drift {
   0% {
-    opacity: 0.15;
+    opacity: 0.1;
     transform: translate(0, 0);
   }
   25% {
     opacity: 0.5;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.25;
     transform: translate(var(--drift-x), var(--drift-y));
   }
   75% {
-    opacity: 0.5;
+    opacity: 0.45;
   }
   100% {
-    opacity: 0.15;
+    opacity: 0.1;
     transform: translate(0, 0);
   }
 }
 
 .particle {
   animation: particle-drift ease-in-out infinite;
+}
+
+/* Animated gradient orbs */
+@keyframes orb-float {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(-45%, -55%) scale(1.1) rotate(90deg);
+  }
+  50% {
+    transform: translate(-55%, -45%) scale(0.95) rotate(180deg);
+  }
+  75% {
+    transform: translate(-48%, -52%) scale(1.05) rotate(270deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+
+.animate-orb {
+  animation: orb-float ease-in-out infinite;
+}
+
+/* Floating tech tags */
+@keyframes float-tag-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(var(--float-x), var(--float-y)) scale(1.02);
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.float-tag {
+  animation: float-tag-drift ease-in-out infinite;
+}
+
+/* CRT scan lines */
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
 }
