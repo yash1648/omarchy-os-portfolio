@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { SystemBar } from '@/components/desktop/SystemBar';
 import { Dock } from '@/components/desktop/Dock';
 import { HeroWallpaper } from '@/components/desktop/HeroWallpaper';
@@ -10,6 +10,7 @@ import { ExperienceWindow } from '@/components/windows/ExperienceWindow';
 import { TerminalWindow } from '@/components/windows/TerminalWindow';
 import { ContactWindow } from '@/components/windows/ContactWindow';
 import { BlogWindow } from '@/components/windows/BlogWindow';
+import { ResumeView } from '@/components/resume/ResumeView';
 import { useWindowManager, WindowId } from '@/hooks/useWindowManager';
 
 const windowConfig: Record<WindowId, { title: string; component: React.FC; width?: number; height?: number }> = {
@@ -22,12 +23,37 @@ const windowConfig: Record<WindowId, { title: string; component: React.FC; width
   blog: { title: '~/blog.sh', component: BlogWindow, width: 500, height: 400 },
 };
 
+const MOBILE_BREAKPOINT = 768;
+
+function useIsMobile(): boolean {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < MOBILE_BREAKPOINT : false
+  );
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+  return isMobile;
+}
+
 const Index = () => {
+  const isMobile = useIsMobile();
+  const [viewMode, setViewMode] = useState<'desktop' | 'resume'>(isMobile ? 'resume' : 'desktop');
   const { windows, openWindow, closeWindow, minimizeWindow, maximizeWindow, focusWindow, activeWindow } = useWindowManager();
+
+  if (viewMode === 'resume') {
+    return <ResumeView onSwitchToDesktop={() => setViewMode('desktop')} />;
+  }
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-background relative">
-      <SystemBar activeWindow={activeWindow} onPowerClick={() => openWindow('contact')} />
+      <SystemBar
+        activeWindow={activeWindow}
+        onPowerClick={() => openWindow('contact')}
+        onToggleView={() => setViewMode('resume')}
+      />
 
       <HeroWallpaper />
 

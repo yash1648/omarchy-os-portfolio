@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Wifi, Battery, Power, Moon, Sun } from 'lucide-react';
+import { Wifi, Battery, Power, FileText } from 'lucide-react';
 import { WindowId } from '@/hooks/useWindowManager';
 
 interface SystemBarProps {
   activeWindow: WindowId | null;
   onPowerClick: () => void;
+  onToggleView?: () => void;
 }
 
-export const SystemBar: React.FC<SystemBarProps> = ({ activeWindow, onPowerClick }) => {
+export const SystemBar: React.FC<SystemBarProps> = ({ activeWindow, onPowerClick, onToggleView }) => {
   const [time, setTime] = useState(new Date());
-  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
@@ -47,6 +47,16 @@ export const SystemBar: React.FC<SystemBarProps> = ({ activeWindow, onPowerClick
 
       {/* Right */}
       <div className="flex items-center gap-3">
+        {onToggleView && (
+          <button
+            onClick={onToggleView}
+            className="text-xs font-mono text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+            title="Resume View"
+          >
+            <FileText size={12} />
+            <span className="hidden sm:inline">Resume</span>
+          </button>
+        )}
         <Wifi size={14} className="text-muted-foreground" />
         <Battery size={14} className="text-primary" />
         <button
