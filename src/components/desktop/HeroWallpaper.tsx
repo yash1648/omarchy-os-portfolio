@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import profile from '@/config/profile.json';
 import { Download } from 'lucide-react';
@@ -10,11 +10,25 @@ const bootSequence = [
   'Initializing desktop environment...',
 ];
 
+function generateParticles(count: number) {
+  if (typeof window === 'undefined') return [];
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    duration: 8 + Math.random() * 10,
+    driftX: Math.random() * 100 - 50,
+    driftY: Math.random() * -200 + Math.random() * 200,
+  }));
+}
+
 export const HeroWallpaper: React.FC = () => {
   const [bootIndex, setBootIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [bootComplete, setBootComplete] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
+
+  const particles = useMemo(() => generateParticles(20), []);
 
   useEffect(() => {
     if (bootIndex >= bootSequence.length) {
@@ -41,22 +55,19 @@ export const HeroWallpaper: React.FC = () => {
 
   return (
     <div className="absolute inset-0 flex items-center justify-center gradient-mesh">
-      {/* Floating particles */}
-      {Array.from({ length: 20 }).map((_, i) => (
+      {/* Floating particles — stable positions */}
+      {particles.map((p) => (
         <motion.div
-          key={i}
+          key={p.id}
           className="absolute w-1 h-1 rounded-full bg-primary/20"
-          initial={{
-            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-            y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
-          }}
+          initial={{ x: p.x, y: p.y }}
           animate={{
-            y: [null, Math.random() * -200, Math.random() * 200],
-            x: [null, Math.random() * 100 - 50],
+            y: [p.y, p.y + p.driftY],
+            x: [p.x, p.x + p.driftX],
             opacity: [0.2, 0.6, 0.2],
           }}
           transition={{
-            duration: 8 + Math.random() * 10,
+            duration: p.duration,
             repeat: Infinity,
             repeatType: 'reverse',
           }}
@@ -80,34 +91,60 @@ export const HeroWallpaper: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <motion.img
-              src={profile.avatar}
-              alt={profile.name}
-              className="w-24 h-24 rounded-full mx-auto border-2 border-primary/30 glow-primary"
+            <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: 'spring' }}
-            />
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold font-mono text-foreground mb-2">
-                {profile.name}
-              </h1>
-              <p className="text-xl text-primary text-glow font-mono">
-                {profile.role}
-              </p>
-              <p className="text-muted-foreground mt-2 max-w-md mx-auto">
-                {profile.tagline}
-              </p>
-            </div>
-            <Button
-              asChild
-              className="bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 hover:glow-primary font-mono"
+              transition={{ delay: 0.2, type: 'spring', damping: 12, stiffness: 200 }}
             >
-              <a href={profile.resumeUrl} download>
-                <Download size={16} />
-                download resume
-              </a>
-            </Button>
+              <motion.img
+                src={profile.avatar}
+                alt={profile.name}
+                className="w-24 h-24 rounded-full mx-auto border-2 border-primary/30 glow-primary"
+                animate={{ boxShadow: ['0 0 20px hsl(157 100% 50% / 0.3)', '0 0 40px hsl(157 100% 50% / 0.5)', '0 0 20px hsl(157 100% 50% / 0.3)'] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              />
+            </motion.div>
+            <div>
+              <motion.h1
+                className="text-4xl md:text-6xl font-bold font-mono text-foreground mb-2"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.7, ease: 'easeOut' }}
+              >
+                {profile.name}
+              </motion.h1>
+              <motion.p
+                className="text-xl text-primary text-glow font-mono"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.7, ease: 'easeOut' }}
+              >
+                {profile.role}
+              </motion.p>
+              <motion.p
+                className="text-muted-foreground mt-2 max-w-md mx-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.7 }}
+              >
+                {profile.tagline}
+              </motion.p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.5 }}
+            >
+              <Button
+                asChild
+                className="bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 hover:glow-primary font-mono transition-all duration-300"
+              >
+                <a href={profile.resumeUrl} download>
+                  <Download size={16} />
+                  download resume
+                </a>
+              </Button>
+            </motion.div>
           </motion.div>
         )}
       </div>

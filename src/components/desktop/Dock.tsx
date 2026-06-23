@@ -25,19 +25,26 @@ export const Dock: React.FC<DockProps> = ({ onOpenWindow }) => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.5, type: 'spring', damping: 20 }}
-        className="glass-panel px-4 py-2 flex items-center gap-2"
+        className="glass-panel px-2 sm:px-4 py-2 flex items-center gap-1 sm:gap-2 overflow-x-auto max-w-[95vw] scrollbar-hide"
       >
         {dockItems.map((item) => (
           <Tooltip key={item.id}>
             <TooltipTrigger asChild>
               <motion.button
                 whileHover={{ scale: 1.3, y: -8 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={() => onOpenWindow(item.id)}
-                className="w-12 h-12 rounded-xl bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors relative group"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 hover:shadow-[0_0_15px_hsl(var(--glow-primary)/0.3)] transition-all duration-300 relative group shrink-0"
               >
-                <item.icon size={22} />
-                <div className="absolute -bottom-1 w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                <motion.div
+                  className="absolute inset-0 rounded-xl bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                  whileHover={{ scale: 1.05 }}
+                />
+                <item.icon size={22} className="relative z-10" />
+                <motion.div
+                  className="absolute -bottom-1 w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100"
+                  layoutId={`dock-indicator-${item.id}`}
+                />
               </motion.button>
             </TooltipTrigger>
             <TooltipContent side="top" className="bg-card border-border font-mono text-xs">

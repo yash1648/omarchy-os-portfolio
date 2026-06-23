@@ -43,6 +43,7 @@ const Index = () => {
             isMinimized={w.isMinimized}
             isMaximized={w.isMaximized}
             zIndex={w.zIndex}
+            position={w.position}
             onClose={() => closeWindow(w.id)}
             onMinimize={() => minimizeWindow(w.id)}
             onMaximize={() => maximizeWindow(w.id)}

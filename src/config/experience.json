@@ -1,25 +1,22 @@
 [
   {
     "company": "Slytherin EduTech Pvt. Ltd.",
-    "role": "Java Spring Boot Trainee ",
+    "role": "Full Stack Developer Trainee",
     "duration": "Aug 2024 — Jan 2025",
     "achievements": [
-      " Worked on development of backend services using Spring Boot, following clean architecture practices and SOLID principles",
-      "Built and maintained REST APIs with proper MVC Architecture",
-      " Implemented authentication & authorization using JWT and role-based access control (RBAC) with Spring Security",
-      " Integrated Hibernate / JPA for database operations, optimized queries using pagination, indexing suggestions, and fetch strategies",
-      "Created and maintained API documentation & testing collections using Postman"
+      "Developed and deployed modular RESTful APIs using Java Spring Boot for multiple enterprise web applications",
+      "Implemented JWT-based authentication and role-based access control (RBAC) to secure API endpoints across multiple user roles",
+      "Built backend services using Spring Data JPA and Hibernate ORM for efficient database operations and complex entity relationship management",
+      "Collaborated in an Agile team across sprint planning and code reviews"
     ]
   },
   {
-    "company": "Arcelor Technology Private Limited",
-    "role": "Software Developement Intern",
+    "company": "Arcelor Private Limited",
+    "role": "Software Development Intern",
     "duration": "Jun 2023 — Jul 2023",
     "achievements": [
-      "Assisted in building backend modules for an internal dashboard using PHP, improving data handling and reporting workflows",
-      "Created and maintained REST-style APIs for dashboard integration and internal feature support",
-      "Worked with MySQL for data retrieval and reporting; optimized queries using indexing and query restructuring to reduce response time"
+      "Developed backend APIs for internal business dashboards using PHP",
+      "Implemented server-side functionality for MySQL database operations, dynamic content management, and reporting features"
     ]
   }
-  
 ]

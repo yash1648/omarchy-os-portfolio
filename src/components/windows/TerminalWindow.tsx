@@ -17,6 +17,8 @@ const helpText = `Available commands:
   projects     Show project portfolio
   experience   Show work experience
   contact      Show contact info
+  education    Show educational background
+  social       Show social links
   clear        Clear terminal
   whoami       Who am I?
   neofetch     System info`;
@@ -37,6 +39,10 @@ function processCommand(cmd: string): string {
       return experience.map(e => `▸ ${e.role} @ ${e.company} (${e.duration})\n${e.achievements.map(a => `  - ${a}`).join('\n')}`).join('\n\n');
     case 'contact':
       return socials.map(s => `${s.name}: ${s.url}`).join('\n');
+    case 'education':
+      return `B.Tech in Computer Engineering\nR.C. Patel Institute of Technology\nExpected: 2026`;
+    case 'social':
+      return socials.map(s => `${s.name.padEnd(10)} ${s.url}`).join('\n');
     case 'neofetch':
       return `╔══════════════════════════╗
 ║  ${profile.name.padEnd(22)} ║
@@ -45,7 +51,10 @@ function processCommand(cmd: string): string {
 ║  OS:     Omarchy Linux   ║
 ║  Shell:  portfolio/zsh   ║
 ║  Term:   web-terminal    ║
+║  Kernel: React 18        ║
 ║  Uptime: ${profile.stats.yearsExperience}+ years         ║
+║  Pkgs:   ${profile.stats.projectsCompleted}+ projects     ║
+║  Shell:  ${profile.techStack.join(', ').substring(0, 20)}.. ║
 ╚══════════════════════════╝`;
     case 'clear': return '__CLEAR__';
     default:

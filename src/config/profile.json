@@ -1,17 +1,17 @@
 {
-  "name": "Yash Bagal",
+  "name": "Yash Ambarraj Bagal",
   "role": "Backend Developer",
-  "tagline": "Backend Engineer | Java Spring Boot & AI Integration | Microservices Architect",
+  "tagline": "Backend Developer · Open Source Contributor · AI/LLM Systems Builder",
   "avatar": "https://api.dicebear.com/9.x/notionists/svg?seed=alex",
-  "bio": "I'm a Backend Engineer specializing in Java Spring Boot with hands-on expertise building scalable REST APIs and AI-integrated microservices. Currently pursuing B.Tech in Computer Engineering at R.C. Patel Institute of Technology, I combine rigorous academic training with real-world development experience",
+  "bio": "Backend Developer with hands-on experience in Java Spring Boot, RESTful API design, and microservices architecture. I build AI-integrated systems — from LLM-powered code review bots to fully local voice assistants in Rust. Active open source contributor with successfully merged pull requests.",
   "resumeUrl": "resume.pdf",
   "stats": {
-    "yearsExperience": 1,
-    "projectsCompleted": 36,
-    "githubCommits": 397
+    "yearsExperience": 2,
+    "projectsCompleted": 12,
+    "githubCommits": 450
   },
   "techStack": [
-    "Java", "Springboot", "Spring Framework", "Rust", "Python",
-    "PostgreSQL", "Docker", "Linux"
+    "Java", "Spring Boot", "Rust", "Python", "TypeScript",
+    "PostgreSQL", "Docker", "LLM/Ollama", "Linux"
   ]
 }

@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Spring Boot 3.x + Spring Security 6.x JWT Implementation",
+    "excerpt": "A 7-class JWT blueprint for clean authentication. Covers MyUser entity, AuthController, JwtAuthFilter, JwtUtil, and 5 critical mistakes to avoid.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_jwt-guide-springboot-activity-7441123997620109312-_UC1",
+    "tags": ["Java", "Spring Boot", "Spring Security", "JWT"]
+  },
+  {
+    "title": "Spring Boot Complete Guide — Basics to Advanced Microservices",
+    "excerpt": "A complete roadmap for building production-ready Spring Boot applications — from auto-configuration and DI to microservices with Spring Cloud, Eureka, and Resilience4j.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_spring-boot-activity-7435708491526381568-BN1G",
+    "tags": ["Spring Boot", "Java", "Microservices"]
+  },
+  {
+    "title": "Java Microservices Interview Prep Guide",
+    "excerpt": "No-nonsense guide for backend and system design interviews covering architecture, async communication with Kafka, Hibernate data management, and Bean Validation.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_microservices-interview-prep-activity-7437851833995354113-tFxN",
+    "tags": ["Java", "Microservices", "Interview Prep", "Kafka"]
+  },
+  {
+    "title": "Java · Spring Boot · Microservices · Angular Interview Prep Guide",
+    "excerpt": "Comprehensive full-stack interview prep covering Core Java, Spring Boot, JPA, testing, coding challenges, Angular, Git, and DevOps strategies.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_full-stack-interview-guide-java-to-angular-activity-7394962455174651904-sR66",
+    "tags": ["Java", "Spring Boot", "Angular", "Interview Prep"]
+  },
+  {
+    "title": "System Design Interview Handbook",
+    "excerpt": "A 75-page structured resource covering core fundamentals, architecture trade-offs, distributed systems concepts, and 10 common interview problems.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_system-design-handbook-activity-7433376160941711360-uChj",
+    "tags": ["System Design", "Backend", "Architecture"]
+  },
+  {
+    "title": "Java Developer Roadmap 2025",
+    "excerpt": "Structured guide for aspiring Java developers: from fundamentals and database skills to Spring, microservices, testing, DevOps, and cloud platforms.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_java-javadeveloper-springboot-activity-7396609655482953728-hAUj",
+    "tags": ["Java", "Career", "Roadmap"]
+  },
+  {
+    "title": "Best Practices for Building Scalable Backend Systems",
+    "excerpt": "Scalability is more than adding servers — microservices, horizontal scaling, caching with Redis, circuit breakers, and observability with Prometheus and Grafana.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_best-practices-for-building-scalable-backend-activity-7396555804591599616-1CYp",
+    "tags": ["Backend", "Scalability", "System Design", "DevOps"]
+  },
+  {
+    "title": "PR Review Bot — Intelligent Automated Code Review",
+    "excerpt": "Built an automated code review system with dual-engine analysis: static heuristics for secrets and null pointers + local LLM inference via Ollama. Privacy-first and production-ready.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_codereview-devtools-opensource-activity-7431685301040889856-ObVg",
+    "tags": ["Code Review", "LLM", "Open Source", "Java", "Spring"]
+  },
+  {
+    "title": "Fully Local AI Voice Assistant in Rust — Sub-900ms Latency",
+    "excerpt": "A 100% local Rust voice assistant: Whisper.cpp for STT, Ollama (Phi 2.7) for reasoning, Piper-TTS for speech. Async Tokio pipeline, zero cloud dependencies.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_rust-ai-localai-activity-7401265712608190464-kY0Y",
+    "tags": ["Rust", "AI", "Voice Assistant", "Local", "Open Source"]
+  },
+  {
+    "title": "Docker Architecture — A Visual Breakdown",
+    "excerpt": "What actually happens when you run docker build, pull, and run. Images are read-only templates; containers add a writable layer — deploy dozens from one image.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_docker-devops-containerization-activity-7398195329705254912-IbFi",
+    "tags": ["Docker", "DevOps", "Containerization"]
+  },
+  {
+    "title": "Cloudflare Outage Post-Mortem — When a Routine Change Breaks Production",
+    "excerpt": "A database permissions change caused duplicate rows in ClickHouse, exceeding a hardcoded 200-feature limit. System-wide panics cascaded across ChatGPT, X/Twitter, Discord, and more.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_devops-sitereliability-incidentresponse-activity-7396843236096479232-rSdA",
+    "tags": ["DevOps", "SRE", "Incident Response", "Cloudflare"]
+  },
+  {
+    "title": "Online Markdown Editor — Open Source Project Launch",
+    "excerpt": "Live split-screen GitHub Flavored Markdown editor with section-based mode, autosave, draft versioning, and export. Client-side only — no backend, no data leaves your browser.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_webdevelopment-opensource-nextjs-activity-7428404953465090048-YBrz",
+    "tags": ["Next.js", "React", "Open Source", "Frontend"]
+  },
+  {
+    "title": "Containerized Minecraft Server — Docker + Playit.gg",
+    "excerpt": "PaperMC inside Docker with Playit.gg tunneling — no port forwarding needed. One-command setup with scripts for start, stop, backup, and management.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_docker-devops-minecraft-activity-7415299910536749056-u0Ds",
+    "tags": ["Docker", "DevOps", "Minecraft", "Open Source"]
+  },
+  {
+    "title": "Nmap Commands Cheatsheet — Network Scanning Reference",
+    "excerpt": "40+ vital Nmap commands for cybersecurity and network administration: target specification, host discovery, port scanning, OS detection, and NSE scripting.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_nmap-cheatsheet-activity-7395773215933005824-kzgB",
+    "tags": ["Cyber Security", "Nmap", "Networking"]
+  },
+  {
+    "title": "Vim Cheatsheet — Commands as a Language",
+    "excerpt": "Vim organized into a structured cheatsheet covering basic commands, advanced text objects and registers, and the Vim mental model — commands as a composable language.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_vim-cheatsheet-basic-advanced-commands-activity-7409657038382895104-pmr5",
+    "tags": ["Vim", "Neovim", "Developer Tools"]
+  },
+  {
+    "title": "Git Mastery Guide — From Basics to DevOps",
+    "excerpt": "Essential Git commands every developer should know: branching, merging, rebasing, stashing, submodules, hooks, and CI/CD integration with GitOps workflows.",
+    "date": "2025",
+    "url": "https://www.linkedin.com/posts/yashbagal666_gitops-activity-7400403733148471296-0TXt",
+    "tags": ["Git", "GitHub", "DevOps", "Version Control"]
+  }
+]

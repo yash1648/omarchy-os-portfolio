@@ -1,31 +1,36 @@
 {
   "languages": [
-    { "name": "Java", "level": 100 },
-    { "name": "Python", "level": 90 },
-    { "name": "TypeScript", "level": 80 },
-    { "name": "Rust", "level": 65 },
-    { "name": "SQL", "level": 85 }
+    { "name": "Java", "level": 95 },
+    { "name": "Rust", "level": 70 },
+    { "name": "Python", "level": 85 },
+    { "name": "JavaScript", "level": 80 },
+    { "name": "TypeScript", "level": 78 },
+    { "name": "SQL", "level": 85 },
+    { "name": "C++", "level": 60 }
   ],
   "frameworks": [
-    { "name": "Spring Boot", "level": 100 },
-    { "name": "React", "level": 95 },
-    { "name": "Node.js", "level": 90 },
-    { "name": "Next.js", "level": 85 },
-    { "name": "Express", "level": 88 },
-    { "name": "FastAPI", "level": 75 }
+    { "name": "Spring Boot", "level": 95 },
+    { "name": "Spring MVC", "level": 90 },
+    { "name": "Spring Data JPA", "level": 90 },
+    { "name": "Hibernate ORM", "level": 88 },
+    { "name": "Node.js", "level": 75 }
+  ],
+  "databases": [
+    { "name": "PostgreSQL", "level": 85 },
+    { "name": "MySQL", "level": 88 }
   ],
   "tools": [
-    { "name": "Git", "level": 95 },
-    { "name": "Docker", "level": 90 },
-    { "name": "Vim/Neovim", "level": 85 },
-    { "name": "Linux", "level": 92 },
-    { "name": "VS Code", "level": 90 }
+    { "name": "Docker", "level": 85 },
+    { "name": "Git", "level": 90 },
+    { "name": "Maven", "level": 85 },
+    { "name": "Postman", "level": 90 },
+    { "name": "Linux", "level": 88 }
   ],
-  "devops": [
-    { "name": "AWS", "level": 45 },
-    { "name": "Kubernetes", "level": 34 },
-    { "name": "CI/CD", "level": 23 },
-    { "name": "Terraform", "level": 54 },
-    { "name": "Nginx", "level": 90 }
+  "aiTools": [
+    { "name": "Ollama", "level": 80 },
+    { "name": "LLM Inference", "level": 78 },
+    { "name": "NLP", "level": 72 },
+    { "name": "GitHub Actions", "level": 70 },
+    { "name": "RAG", "level": 65 }
   ]
 }

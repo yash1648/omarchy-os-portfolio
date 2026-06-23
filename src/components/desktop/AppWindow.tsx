@@ -1,5 +1,5 @@
-import React, { useRef, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 interface AppWindowProps {
@@ -9,6 +9,7 @@ interface AppWindowProps {
   isMinimized: boolean;
   isMaximized: boolean;
   zIndex: number;
+  position: { x: number; y: number };
   onClose: () => void;
   onMinimize: () => void;
   onMaximize: () => void;
@@ -20,45 +21,66 @@ interface AppWindowProps {
 }
 
 export const AppWindow: React.FC<AppWindowProps> = ({
-  title, isOpen, isMinimized, isMaximized, zIndex,
+  title, isOpen, isMinimized, isMaximized, zIndex, position,
   onClose, onMinimize, onMaximize, onFocus, children,
   className, defaultWidth = 700, defaultHeight = 500,
 }) => {
-  const constraintsRef = useRef<HTMLDivElement>(null);
+  const [windowPos, setWindowPos] = useState({ x: position.x, y: position.y });
+  const dragX = useMotionValue(0);
+  const dragY = useMotionValue(0);
   const [isDragging, setIsDragging] = useState(false);
 
   if (!isOpen || isMinimized) return null;
 
+  const cascadeOffset = 30;
+  const w = typeof window !== 'undefined' ? window.innerWidth : 1200;
+  const h = typeof window !== 'undefined' ? window.innerHeight : 800;
+
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+        initial={{ scale: 0.9, opacity: 0, filter: 'blur(4px)' }}
+        animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
+        exit={{ scale: 0.9, opacity: 0, filter: 'blur(4px)' }}
+        transition={{ type: 'spring', damping: 22, stiffness: 260, mass: 0.8 }}
         drag={!isMaximized}
         dragMomentum={false}
-        onDragStart={() => setIsDragging(true)}
-        onDragEnd={() => setIsDragging(false)}
+        dragElastic={0}
+        onDragStart={() => {
+          setIsDragging(true);
+          onFocus();
+        }}
+        onDragEnd={(_, info) => {
+          setIsDragging(false);
+          // Convert drag offset into a permanent position change,
+          // then reset the internal drag transform to 0
+          setWindowPos(prev => ({
+            x: Math.max(0, Math.min(w - 100, prev.x + info.offset.x)),
+            y: Math.max(0, Math.min(h - 200, prev.y + info.offset.y)),
+          }));
+          dragX.set(0);
+          dragY.set(0);
+        }}
         onMouseDown={onFocus}
         className={cn(
-          'fixed glass-panel shadow-2xl flex flex-col overflow-hidden',
+          'fixed shadow-2xl flex flex-col overflow-hidden',
           isMaximized
             ? 'inset-0 top-10 bottom-16 rounded-none'
             : 'rounded-2xl',
+          'glass-panel',
           className
         )}
         style={{
           zIndex,
+          x: isMaximized ? 0 : dragX,
+          y: isMaximized ? 0 : dragY,
           ...(isMaximized ? {} : {
-            width: defaultWidth,
-            height: defaultHeight,
-            maxWidth: '95vw',
-            maxHeight: 'calc(100vh - 120px)',
-            left: '50%',
-            top: '50%',
-            x: '-50%',
-            y: '-50%',
+            width: Math.min(defaultWidth, w - 32),
+            height: Math.min(defaultHeight, h - 160),
+            maxWidth: 'calc(100vw - 16px)',
+            maxHeight: 'calc(100vh - 140px)',
+            left: Math.min(windowPos.x + cascadeOffset, w - 100),
+            top: Math.min(windowPos.y + cascadeOffset, h - 200),
           }),
         }}
       >
@@ -74,7 +96,7 @@ export const AppWindow: React.FC<AppWindowProps> = ({
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-auto p-6 scrollbar-hide">
+        <div className="flex-1 overflow-auto p-4 md:p-6 scrollbar-hide">
           {children}
         </div>
       </motion.div>
